@@ -81,7 +81,7 @@ module Itesttool
 
   def delete(url, data, res_format)
     url_obj = URI.parse(url)
-    res = execute_request(url_obj, data){Net::HTTP::DELETE.new(url_obj.path)}
+    res = execute_request(url_obj, data){Net::HTTP::Delete.new(url_obj.path)}
     decorate_response(res, "DELETE", url, res_format)
   end
 
